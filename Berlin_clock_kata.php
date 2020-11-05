@@ -15,7 +15,7 @@ class Berlin_clock_kata
         if ($int % 5 == "4") return "YYYY";
     }
 
-    public function simple5minutes(int $int ): string
+    public function ligne5minutes(int $int ): string
     {
         $int =- $int%5;
 
@@ -36,10 +36,19 @@ class Berlin_clock_kata
 
     public function simpleHeures(int $int ):string
     {
-
+        if ($int % 5 == "1") return "ROOO";
+        if ($int % 5 == "2") return "RROO";
+        if ($int % 5 == "3") return "RRRO";
+        if ($int % 5 == "4") return "RRRR";
     }
 
-
+    public function ligne5Heures(int $int ):string
+    {
+        if ($int % 5 == "1") return "ROOO";
+        if ($int % 5 == "2") return "RROO";
+        if ($int % 5 == "3") return "RRRO";
+        if ($int % 5 == "4") return "RRRR";
+    }
 
 
 
