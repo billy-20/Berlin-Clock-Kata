@@ -55,7 +55,12 @@ class BerlinClockKataTest extends TestCase
 
 
     }
+    public function test_ligne5minutes_given0_shouldReturnOOOOOOOOOOO()
+    {
+        $actual= $this->berlinClockKata->ligne5minutes("0");
+        $this->assertEquals("O O O O O O O O O O O", $actual);
 
+    }
     public function test_ligne5minutes_given5_shouldReturnYOOOOOOOOOO()
     {
         $actual= $this->berlinClockKata->ligne5minutes("5");
@@ -203,6 +208,13 @@ class BerlinClockKataTest extends TestCase
 
     }
 
+    public function test_heureBerlin_given16h48min10s_shouldReturnR_RRRO_ROOO_YYRYYRYYROO_YYYO(){
+
+        $actual = $this->berlinClockKata->horlogeBerlin(16,48,10);
+        $this->assertEquals("R\nRRRO\nROOO\nY Y R Y Y R Y Y R O O\nYYYO", $actual);
+
+
+    }
 
 
 

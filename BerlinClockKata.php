@@ -18,6 +18,7 @@ class BerlinClockKata
 
     public function ligne5minutes(int $int): string
     {
+    $int =$int -$int%5;
 
         if ($int == "5") return "Y O O O O O O O O O O";
         if ($int == "10") return "Y Y O O O O O O O O O";
@@ -31,26 +32,31 @@ class BerlinClockKata
         if ($int == "50") return "Y Y R Y Y R Y Y R Y O";
         if ($int == "55") return "Y Y R Y Y R Y Y R Y Y";
 
+        return "O O O O O O O O O O O";
 
     }
 
     public function simpleHeures(int $int): string
     {
+
+
         if ($int % 5 == "1") return "ROOO";
         if ($int % 5 == "2") return "RROO";
         if ($int % 5 == "3") return "RRRO";
         if ($int % 5 == "4") return "RRRR";
-        if( $int %5 == "0") return "OOOO";
+        return "OOOO";
     }
 
     public function ligne5Heures(int $int): string
     {
-        //$int =- $int%5;
+        $int =$int - $int%5;
 
         if ($int  == "5") return "ROOO";
         if ($int  == "10") return "RROO";
         if ($int  == "15") return "RRRO";
         if ($int  == "20") return "RRRR";
+
+        return "OOOO";
     }
 
     public function simpleSecondes(int $int): string
@@ -62,8 +68,19 @@ class BerlinClockKata
             return "O";
         }
 
+    }
 
+    public function horlogeBerlin(string $heures , string $minutes , string $secondes ): string
+    {
+        $heureBerlin= "";
 
+        $heureBerlin= $heureBerlin . $this->simpleSecondes($secondes) . "\n";
+        $heureBerlin=$heureBerlin . $this->ligne5Heures($heures) . "\n";
+        $heureBerlin=$heureBerlin . $this->simpleHeures($heures) ."\n";
+        $heureBerlin = $heureBerlin . $this->ligne5minutes($minutes) ."\n";
+        $heureBerlin=$heureBerlin . $this->simpleMinutes($minutes);
+
+        return $heureBerlin;
 
 
     }
@@ -74,21 +91,5 @@ class BerlinClockKata
 
 
 
-    /* public function simpleMinutes(int $int) : string
-     {
-     return $this->tableSimpleMinutes($int);
-     }
-
-
-     public function tableSimpleMinutes(int $ampoules ): array
-     {
-         for( $i=0 ; $i<4 ; $i++){
-             if($i%3==0){
-                 $this->tableauMinutes[$i]="on";
-             }
-         }
-         return $this->tableauMinutes;
-     }
- */
 
 }
