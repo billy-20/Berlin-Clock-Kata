@@ -18,7 +18,6 @@ class BerlinClockKata
 
     public function ligne5minutes(int $int): string
     {
-        $int = -$int % 5;
 
         if ($int == "5") return "Y O O O O O O O O O O";
         if ($int == "10") return "Y Y O O O O O O O O O";
