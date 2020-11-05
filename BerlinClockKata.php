@@ -45,7 +45,7 @@ class BerlinClockKata
 
     public function ligne5Heures(int $int): string
     {
-        $int =- $int%5;
+        //$int =- $int%5;
 
         if ($int  == "5") return "ROOO";
         if ($int  == "10") return "RROO";
@@ -55,7 +55,7 @@ class BerlinClockKata
 
     public function simpleSecondes(int $int): string
     {
-        if ($int % 2 == "0") {
+        if ($int % 2 == 0 ) {
             return "R";
 
         }else{

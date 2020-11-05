@@ -154,5 +154,60 @@ class BerlinClockKataTest extends TestCase
     }
 
 
+    public function test_ligne5Heures_given5_shouldReturnROOO()
+    {
+        $actual= $this->berlinClockKata->ligne5Heures("5");
+        $this->assertEquals("ROOO", $actual);
+
+    }
+    public function test_ligne5Heures_given10_shouldReturnRROO()
+    {
+        $actual= $this->berlinClockKata->ligne5Heures("10");
+        $this->assertEquals("RROO", $actual);
+
+    }
+    public function test_ligne5Heures_given15_shouldReturnRRRO()
+    {
+        $actual= $this->berlinClockKata->ligne5Heures("15");
+        $this->assertEquals("RRRO", $actual);
+
+    }
+    public function test_ligne5Heures_given20_shouldReturnRRRR()
+    {
+        $actual= $this->berlinClockKata->ligne5Heures("20");
+        $this->assertEquals("RRRR", $actual);
+
+    }
+    public function test_simpleSecondes_given0_shouldReturnR()
+    {
+        $actual= $this->berlinClockKata->simpleSecondes(0);
+        $this->assertEquals("R", $actual);
+
+    }
+    public function test_simpleSecondes_given1_shouldReturnO()
+    {
+        $actual= $this->berlinClockKata->simpleSecondes(1);
+        $this->assertEquals("O", $actual);
+
+    }
+    public function test_simpleSecondes_given2_shouldReturnR()
+    {
+        $actual= $this->berlinClockKata->simpleSecondes(2);
+        $this->assertEquals("R", $actual);
+
+    }
+    public function test_simpleSecondes_given3_shouldReturnO()
+    {
+        $actual= $this->berlinClockKata->simpleSecondes(3);
+        $this->assertEquals("O", $actual);
+
+    }
+
+
+
+
+
+
+
 
 }
